@@ -29,7 +29,6 @@ function CreateArea(props) {
   }
 
   function onClikcHandle() {
-    console.log("clicked");
     setContentStatus(true);
     console.log(contentStatus);
   }
@@ -37,7 +36,6 @@ function CreateArea(props) {
   return (
     <div>
       <form className="create-note">
-        <Zoom in={true}>
           <input
             hidden={contentStatus === true ? false : true}
             onChange={handelChange}
@@ -45,7 +43,6 @@ function CreateArea(props) {
             placeholder="Title"
             value={newNote.title}
           />
-        </Zoom>
         <textarea
           onChange={handelChange}
           onClick={onClikcHandle}
